@@ -14,3 +14,13 @@ input OrderInput {
 type Mutation {
     createOrder(input: OrderInput): Order
 }
+
+type OrderList{
+    id : String!
+    Price: Float!
+    Tax: Float!
+}
+
+type Query {
+    getOrders: [OrderList!]
+}

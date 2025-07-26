@@ -14,6 +14,13 @@ curl --request GET \
   --url http://localhost:8000/orders \
 ```
 
-**gRPC:**
+**gRPC:** instalar o [evans](https://github.com/ktr0731/evans) e executar: 
+1. `evans -r repl`
+2. call ListOrder
 
-**GraphQL:** acessar o playground em `http://localhost:8080/` e executar
+**GraphQL:** acessar o playground em `http://localhost:8080/` e executar:
+```
+query {
+  getOrders{id, Price, Tax}
+}
+```
