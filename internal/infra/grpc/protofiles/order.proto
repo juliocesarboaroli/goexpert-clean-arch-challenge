@@ -17,7 +17,7 @@ message CreateOrderResponse {
   float final_price = 4;
 }
 
-message GetOrdersResponse {
+message ListOrderResponse {
    repeated OrderResponse orders = 1;
 }
 
@@ -30,5 +30,5 @@ message OrderResponse {
 
 service OrderService {
   rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
-  rpc GetOrders(Void) returns (GetOrdersResponse);
+  rpc ListOrder(Void) returns (ListOrderResponse);
 }
